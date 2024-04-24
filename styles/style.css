@@ -83,24 +83,136 @@ a {
     font-size: 23px;
 }
 
-.header__menu {
+.open {
+    display: flex !important;
+}
+
+.burger {
+    display: flex;
+    position: relative;
+    /* position: fixed; */
+    cursor: pointer;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 45px;
+    height: 25px;
+}
+
+.burger span {
+    height: 3px;
+    width: 80%;
+    transform: scale(1);
+    background-color: var(--black);
+}
+
+.burger::before, .burger::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--black);
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before { top: 0 }
+
+.burger::after { bottom: 0; }
+
+.burger.active span { transform: scale(0) }
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+.burger_nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 50%;
+    top: 0; bottom: 0; left: 50%; right: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: var(--bg);
+}
+
+.burger_nav ul {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    row-gap: 50px;
+    font-size: 25px;
+
+}
+
+/* Pop up */
+
+.popup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup__body {
+    width: 50%;
+    height: 50%;
+    margin: 130px auto;
+    position: relative;
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    background-color: var(--bg);
+    border: none;
+    border-radius: 20px;
+    padding: 25px 50px;
+}
+
+.popup__text {
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+}
+
+.popup__tel {
+    border: 1px solid var(--dark-grey);
+    border-radius: 30px;
+    background-color: var(--bg);
+    font-size: 25px;
+    padding: 15px 20px;
+}
+
+.popup__request {
     cursor: pointer;
-    background-color: var(--light-grey);
+    background-color: var(--dark-orange);
     border: none;
+    border-radius: 30px;
+    color: var(--bg);
+    font-size: 25px;
+    padding: 15px 100px;
 }
 
-.menu__item {
-    width: 25px;
-    height: 3px;
-    background-color: var(--black);
-    border: none;
-}
-
-.menu__item:nth-child(1) {
-    width: 56px;
+.popup__close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
 }
 
 /* 2. Стань владельцем кофейни */
@@ -1220,6 +1332,140 @@ a {
     display: none;
 }
 
+/* Pop up */
+
+.popup-business {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-business__body {
+    width: 50%;
+    height: 50%;
+    margin: 130px auto;
+    position: relative;
+}
+
+.popup-business__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    background-color: var(--bg);
+    border: none;
+    border-radius: 20px;
+    padding: 25px 50px;
+}
+
+.popup-business__text {
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+}
+
+.popup-business__tel, .popup-business__name, .popup-business__email {
+    border: 1px solid var(--dark-grey);
+    border-radius: 30px;
+    background-color: var(--bg);
+    font-size: 25px;
+    padding: 15px 20px;
+}
+
+.popup-business__request {
+    cursor: pointer;
+    background-color: var(--dark-orange);
+    border: none;
+    border-radius: 30px;
+    color: var(--bg);
+    font-size: 25px;
+    padding: 15px 100px;
+}
+
+.popup-business__close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.popup-business__politics {
+    font-size: 18px;
+}
+
+/* Pop up */
+
+.popup-contract {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-contract__body {
+    width: 50%;
+    height: 50%;
+    margin: 130px auto;
+    position: relative;
+}
+
+.popup-contract__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    background-color: var(--bg);
+    border: none;
+    border-radius: 20px;
+    padding: 25px 50px;
+}
+
+.popup-contract__text {
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+}
+
+.popup-contract__tel, .popup-contract__name, .popup-contract__email {
+    border: 1px solid var(--dark-grey);
+    border-radius: 30px;
+    background-color: var(--bg);
+    font-size: 25px;
+    padding: 15px 20px;
+}
+
+.popup-contract__request {
+    cursor: pointer;
+    background-color: var(--dark-orange);
+    border: none;
+    border-radius: 30px;
+    color: var(--bg);
+    font-size: 25px;
+    padding: 15px 100px;
+}
+
+.popup-contract__close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.popup-contract__politics {
+    font-size: 18px;
+}
+
 @media (max-width: 1439px) {
 
     /* 1. Шапка */
@@ -1232,11 +1478,10 @@ a {
         font-size: 24px;
         align-items: center;
     }
-
-    .header__button-menu {
-        display: flex;
-        align-items: center;
-        gap: 33px;
+    
+    .burger_nav {
+        width: 70%;
+        top: 0; bottom: 0; left: 30%; right: 0;
     }
 
     /* 2. Стань владельцем кофейни */
@@ -1932,6 +2177,26 @@ a {
         height: 208px;
     }
 
+    /* Pop up */
+
+    .popup-business__body {
+        margin: 70px auto;
+    }
+
+    .popup-business__politics {
+        font-size: 13px;
+    }
+
+    /* Pop up */
+
+    .popup-contract__body {
+        margin: 70px auto;
+    }
+
+    .popup-contract__politics {
+        font-size: 13px;
+    }
+
     /* 13. Футер */
 
     .footer {
@@ -1959,20 +2224,16 @@ a {
         font-size: 24px;
         align-items: center;
     }
-
-    .header__button-menu {
-        display: flex;
-        align-items: center;
-        gap: 33px;
+    
+    .burger_nav {
+        width: 70%;
+        top: 0; bottom: 0; left: 30%; right: 0;
+        padding: 50px 30px;
     }
-
-    .header__button {
-        padding: 12px 13px;
-        font-size: 18px;
-    }
-
-    .header__menu {
-        display: none;
+    
+    .burger_nav ul {
+        row-gap: 30px;
+        font-size: 20px;
     }
 
     /* 2. Стань владельцем кофейни */
@@ -2908,6 +3169,68 @@ a {
         height: 144px;
     }
 
+    /* Pop up */
+
+    .popup-business__body {
+        width: 70%;
+        height: 80%;
+        margin: 60px auto;
+    }
+
+    .popup-business__text {
+        font-size: 20px;
+    }
+
+    .popup-business__tel, .popup-business__name, .popup-business__email {
+        font-size: 20px;
+        padding: 15px 20px;
+    }
+
+    .popup-business__request {
+        cursor: pointer;
+        background-color: var(--dark-orange);
+        border: none;
+        border-radius: 30px;
+        color: var(--bg);
+        font-size: 20px;
+        padding: 15px 84px;
+    }
+
+    .popup-business__form {
+        gap: 15px
+    }
+
+      /* Pop up */
+
+    .popup-contract__body {
+        width: 70%;
+        height: 80%;
+        margin: 60px auto;
+    }
+
+    .popup-contract__text {
+        font-size: 20px;
+    }
+
+    .popup-contract__tel, .popup-contract__name, .popup-contract__email {
+        font-size: 20px;
+        padding: 15px 20px;
+    }
+
+    .popup-contract__request {
+        cursor: pointer;
+        background-color: var(--dark-orange);
+        border: none;
+        border-radius: 30px;
+        color: var(--bg);
+        font-size: 20px;
+        padding: 15px 84px;
+    }
+
+    .popup-contract__form {
+        gap: 15px
+    }
+
     /* 13. Футер */
 
     .footer {
@@ -2955,7 +3278,7 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        justify-content: space-around;
     }
 
     .header__circles {
@@ -2968,7 +3291,7 @@ a {
     }
 
     .header__num {
-        font-size: 9px;
+        font-size: 8px;
     }
     
     .header__logo {
@@ -2977,13 +3300,67 @@ a {
     }
 
     .header__button {
-        padding: 7px 15px;
-        font-size: 8px;
+        padding: 6px 5px;
         letter-spacing: normal;
+        font-size: 10px;
     }
 
-    .header__menu {
-       display: none;
+    .header__button-menu {
+        gap: 8px;
+    }
+    
+    .open {
+        display: flex !important;
+    }
+    
+    .burger {
+        width: 20px;
+        height: 13px;
+    }
+    
+    .burger span {
+        height: 2px;
+    }
+    
+    .burger::before, .burger::after {
+        height: 2px;
+    }
+    
+    .burger_nav {
+        height: 100%;
+        width: 80%;
+        top: 0; bottom: 0; left: 20%; right: 0;
+        padding: 30px 0px;
+    }
+    
+    .burger_nav ul {
+        row-gap: 20px;
+        font-size: 14px;
+    }
+       
+    /* Pop up */
+
+    .popup__body {
+        width: 80%;
+        height: 80%;
+        margin: 100px auto;
+    }
+
+    .popup__text {
+        font-size: 15px;
+    }
+
+    .popup__tel {
+        font-size: 15px;
+    }
+
+    .popup__request {
+        font-size: 15px;
+        padding: 15px 69px;
+    }
+
+    .popup__close {
+        font-size: 30px;
     }
 
     /* 2. Стань владельцем кофейни */
@@ -3137,67 +3514,44 @@ a {
     /* 3. Получи предложение */
 
     .offer {
-        min-height: 127px;
+        min-height: 530px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .offer__input {
-        width: 300px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 50px;
-        grid-row-gap: 7px;
-        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        background-color: var(--dark-grey);
+        border: none;
+        border-radius: 20px;
+        padding: 25px 50px;
     }
     
     .offer__text {
-        grid-column: 1/2;
-        grid-row: 1/2;
         align-self: center;
-        font-size: 11px;
+        font-size: 19px;
         letter-spacing: normal;
     }
     
     .input__name, .input__email, .input__tel, .input__city {
-        padding: 5px 6px;
-        font-size: 10px;
-        width: 94px;
-        height: 12px;
-    }
-    
-    .input__name {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    
-    .input__tel {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-    
-    .input__email {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-    
-    .input__city {
-        grid-column: 2/3;
-        grid-row: 3/4;
+        padding: 13px 21px;
+        font-size: 19px;
+        width: 100%;
     }
     
     .button__request {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        width: 109px;
-        height: 22px;
-        font-size: 10px;
-        padding: 5px 6px;
+        width: 100%;
+        font-size: 19px;
+        padding: 13px 21px;
         letter-spacing: normal;
     }
     
     .offer__privacy {
-        grid-column: 1/3;
-        grid-row: 4/5;
-        font-size: 5px;
+        font-size: 8px;
         letter-spacing: normal;
     }
 
@@ -3209,18 +3563,17 @@ a {
 
     .how-work {
         font-size: 25px;
-        padding-top: 26px;
-        padding-bottom: 18px;
+        padding-top: 12px;
+        padding-bottom: 15px;
     }
 
     .cat-work {
-        width: 121px;
-        height: 124px;
+        display: none;
     }
 
     .watch-video__arrow {
-        width: 8px;
-        height: 26px;
+        width: 9px;
+        height: 29px;
     }
 
     .cat-button {
@@ -3230,71 +3583,58 @@ a {
     .watch-video {
         gap: 15px;
         border-radius: 20px;
-        padding: 12px 15px;
+        padding: 12px 30px;
     } 
 
     .watch-video__item {
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .watch-video__item:nth-child(2) {
-        font-size: 30px;
+        font-size: 35px;
     }
 
      /* 5. Открой кофейню */
-
-     .open-coffee {
-        min-height: 127px;
+  
+    .open-coffee {
+        min-height: 530px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .open-coffee__input {
-        width: 300px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 50px;
-        grid-row-gap: 7px;
-        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        background-color: var(--light-grey);
+        border: none;
+        border-radius: 20px;
+        padding: 25px 50px;
     }
     
     .open-coffee__text {
-        grid-column: 1/2;
-        grid-row: 1/2;
         align-self: center;
-        font-size: 11px;
+        font-size: 19px;
         letter-spacing: normal;
     }
     
     .open-coffee__name, .open-coffee__email, .open-coffee__tel, .open-coffee__city {
-        padding: 5px 6px;
-        font-size: 10px;
-        width: 94px;
-        height: 12px;
+        padding: 13px 21px;
+        font-size: 19px;
+        width: 100%;
     }
     
-    .open-coffee__name {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    
-    .open-coffee__tel {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-    
-    .open-coffee__email {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-    
-    .open-coffee__city {
-        grid-column: 2/3;
-        grid-row: 3/4;
+    .button__request {
+        width: 100%;
+        font-size: 19px;
+        padding: 13px 21px;
+        letter-spacing: normal;
     }
     
     .offer__privacy2 {
-        grid-column: 1/3;
-        grid-row: 4/5;
-        font-size: 5px;
+        font-size: 8px;
         letter-spacing: normal;
     }
 
@@ -3488,51 +3828,33 @@ a {
     /* 7. Стань частью OMIMI */
 
     .join-omimi {
-        min-height: 127px;
+        min-height: 530px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .join-omimi__input {
-        width: 300px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 50px;
-        grid-row-gap: 7px;
-        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        background-color: var(--dark-grey);
+        border: none;
+        border-radius: 20px;
+        padding: 25px 50px;
     }
     
     .join-omimi__text {
-        grid-column: 1/2;
-        grid-row: 1/2;
         align-self: center;
-        font-size: 11px;
+        font-size: 19px;
         letter-spacing: normal;
     }
     
     .join-omimi__name, .join-omimi__email, .join-omimi__tel, .join-omimi__city {
-        padding: 5px 6px;
-        font-size: 10px;
-        width: 94px;
-        height: 12px;
-    }
-    
-    .join-omimi__name {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    
-    .join-omimi__tel {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-    
-    .join-omimi__email {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-    
-    .join-omimi__city {
-        grid-column: 2/3;
-        grid-row: 3/4;
+        padding: 13px 21px;
+        font-size: 19px;
+        width: 100%;
     }
 
     /* 8. Какой заработок */
@@ -3755,51 +4077,33 @@ a {
     /* 9. Открой франшизу */
 
     .franchise {
-        min-height: 127px;
+        min-height: 530px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .franchise__input {
-        width: 300px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 50px;
-        grid-row-gap: 7px;
-        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        background-color: var(--light-grey);
+        border: none;
+        border-radius: 20px;
+        padding: 25px 50px;
     }
     
     .franchise__text {
-        grid-column: 1/2;
-        grid-row: 1/2;
         align-self: center;
-        font-size: 11px;
+        font-size: 19px;
         letter-spacing: normal;
     }
     
     .franchise__name, .franchise__email, .franchise__tel, .franchise__city {
-        padding: 5px 6px;
-        font-size: 10px;
-        width: 94px;
-        height: 12px;
-    }
-    
-    .franchise__name {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    
-    .franchise__tel {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-    
-    .franchise__email {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-    
-    .franchise__city {
-        grid-column: 2/3;
-        grid-row: 3/4;
+        padding: 13px 21px;
+        font-size: 19px;
+        width: 100%;
     }
 
     /* 10. Почему OMIMI? */
@@ -3842,51 +4146,33 @@ a {
     /* 11. Заработай с OMIMI */
 
     .make-money {
-        min-height: 127px;
+        min-height: 530px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .make-money__input {
-        width: 300px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 50px;
-        grid-row-gap: 7px;
-        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        background-color: var(--dark-grey);
+        border: none;
+        border-radius: 20px;
+        padding: 25px 50px;
     }
     
     .make-money__text {
-        grid-column: 1/2;
-        grid-row: 1/2;
         align-self: center;
-        font-size: 11px;
+        font-size: 19px;
         letter-spacing: normal;
     }
     
     .make-money__name, .make-money__email, .make-money__tel, .make-money__city {
-        padding: 5px 6px;
-        font-size: 10px;
-        width: 94px;
-        height: 12px;
-    }
-    
-    .make-money__name {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    
-    .make-money__tel {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-    
-    .make-money__email {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-    
-    .make-money__city {
-        grid-column: 2/3;
-        grid-row: 3/4;
+        padding: 13px 21px;
+        font-size: 19px;
+        width: 100%;
     }
 
     /* 12. Как стать партнером */
@@ -3947,6 +4233,66 @@ a {
         padding-top: 20px;
     }
 
+    /* Pop up */
+
+    .popup-business__body {
+        width: 80%;
+        height: 80%;
+        margin: 60px auto;
+    }
+
+    .popup-business__text {
+        font-size: 15px;
+    }
+
+    .popup-business__tel, .popup-business__name, .popup-business__email {
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+
+    .popup-business__request {
+        font-size: 15px;
+        padding: 12px 69px;
+    }
+
+    .popup-business__close {
+        font-size: 30px;
+    }
+
+    .popup-business__politics {
+        font-size: 10px;
+    }
+
+     /* Pop up */
+
+    .popup-contract__body {
+        width: 80%;
+        height: 80%;
+        margin: 60px auto;
+    }
+
+    .popup-contract__text {
+        font-size: 15px;
+    }
+
+    .popup-contract__tel, .popup-contract__name, .popup-contract__email {
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+
+    .popup-contract__request {
+        font-size: 15px;
+        padding: 12px 69px;
+    }
+
+    .popup-contract__close {
+        font-size: 30px;
+    }
+
+    .popup-contract__politics {
+        font-size: 10px;
+    }
+
     /* 13. Футер */
 
     .footer {
@@ -3954,33 +4300,46 @@ a {
     }
 
     .footer__container {
-        padding-top: 15px;
+        padding-top: 10px;
+        gap: 45px;
     }
 
     .footer__contacts {
         gap: 10px;
+        align-self: start;
+    }
+
+    .footer__logo {
+        gap: 10px;
     }
 
     .whatsapp {
-        display: none;
+       width: 19px;
+       height: 19px;
+       padding: 0;
+    }
+
+    .logo-footer {
+        padding: 0;
+        width: 85px;
+        height: 32px;
     }
 
     .telegram {
-        display: none;
+        width: 19px;
+        height: 19px;
     }
 
     .footer__text {
-       display: none;
+       font-size: 10px;
     }
 
-    .footer__text2 {
-        display: block;
-        font-size: 10px;
-        color: var(--bg);
+    .link__item {
+        font-size: 12px;
     }
 
     .footer__links {
-        display: none;
+        gap: 5px;
     }
 
 }

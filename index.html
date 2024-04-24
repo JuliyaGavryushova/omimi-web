@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,24 +11,44 @@
     <link rel="stylesheet" href="styles/normalize.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <div class="header center">
         <div class="header__number">
             <img src="images/circles.svg" alt="Circles" class="header__circles">
-            <span class="header__num">8 (981)4697301</span>
+            <a href="tel:+79814697301" class="header__num">8 (981)4697301</a>
         </div>
         <img src="images/logo.svg" alt="Logo" class="header__logo">
         <div class="header__button-menu">
-            <button class="header__button">Заказать&nbsp;звонок</button>
-            <button class="header__menu">
-                <div class="menu__item"></div>
-                <div class="menu__item"></div>
-                <div class="menu__item"></div>
-            </button>
+            <button class="header__button">Заказать звонок</button>
+            <nav class="burger_nav">
+                <ul>
+                    <a href="#">Станьте владельцем кофейни OMIMI COFFEE</a>
+                    <a href="#">Кофе, чай, снэки, бонусы</a>
+                    <a href="#">Как это работает?</a>
+                    <a href="#">Из чего состоит?</a>
+                    <a href="#">Какой заработок?</a>
+                    <a href="#">Почему OMIMI COFFEE?</a>
+                    <a href="#">Как стать партнёром OMIMI COFFEE</a>
+                </ul>
+            </nav>
+            <div class="burger">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="popup">
+        <div class="popup__body">
+            <div class="popup__form">
+                <span class="popup__text">Оставьте ваш телефон, мы с Вами свяжемся</span>
+                <input class="popup__tel" type="tel" placeholder="+7(999)9999999">
+                <button class="popup__request">Отправить</button>
+            </div>
+            <div class="popup__close">&#10006</div>
         </div>
     </div>
     <div class="about center">
-        <h1 class="about__title">Станьте владельцем кофейни 3в1</h1>
+        <h1 class="about__title"><a name="part2"></a>Станьте владельцем кофейни 3в1</h1>
         <div class="about__container">
             <img src="images/omimi.svg" alt="Omimi" class="about__omimi">
             <img src="images/rectangle2.png" alt="Rectangle" class="about__rectangle-vend">
@@ -52,17 +73,18 @@
     </div>
     <div class="offer center">
         <div class="offer__input">
-            <span class="offer__text">Получи предложение</span>
+            <span class="offer__text"><a name="part1"></a>Получи предложение</span>
             <input class="input__name" type="text" placeholder="Ваше имя">
             <input class="input__email" type="email" placeholder="Ваш e-mail">
             <input class="input__tel" type="tel" placeholder="+7(999)9999999">
             <input class="input__city" type="text" placeholder="Ваш город">
             <button class="button__request">Оставить заявку</button>
-            <span class="offer__privacy">Нажимая кнопку, вы соглашаетесь с политикой в отношении обработки персональных данных.</span>
+            <span class="offer__privacy">Нажимая кнопку, вы соглашаетесь с <a href="politika.html">политикой в отношении
+                    обработки персональных данных.</a></span>
         </div>
     </div>
     <div class="video center">
-        <h3 class="how-work">Как это работает?</h3>
+        <h3 class="how-work"><a name="part3"></a>Как это работает?</h3>
         <div class="cat-button">
             <img src="images/cat.svg" alt="Cat work" class="cat-work">
             <button class="watch-video">
@@ -81,22 +103,23 @@
             <input class="open-coffee__tel" type="tel" placeholder="+7(999)9999999">
             <input class="open-coffee__city" type="text" placeholder="Ваш город">
             <button class="button__request">Оставить заявку</button>
-            <span class="offer__privacy2">Нажимая кнопку, вы соглашаетесь с политикой в отношении обработки персональных данных.</span>
+            <span class="offer__privacy2">Нажимая кнопку, вы соглашаетесь с <a href="politika.html">политикой в
+                    отношении обработки персональных данных.</a></span>
         </div>
     </div>
     <div class="coffee-tea-point center">
         <div class="coffee-tea-point__container">
-            <div class="coffee-tea__text">Coffee-tea point</div>
+            <div class="coffee-tea__text"><a name="part4"></a>Coffee-tea point</div>
             <div class="lv307">LV 307</div>
             <div class="tea__text">Чай</div>
             <div class="cm210">210 см</div>
             <div class="cm140">140 см</div>
-            <div class="price420">400 000 ₽</div>
+            <div class="price420">420 000 ₽</div>
             <div class="snack__text">Снэковый аппарат</div>
             <div class="positions12">12 позиций</div>
             <div class="cm20">20 см</div>
             <div class="cm210-2">210 см</div>
-            <div class="price80">50 000 ₽</div>
+            <div class="price80">80 000 ₽</div>
             <span class="how-much">Сколько стоит?</span>
             <img src="images/rectangle-part1.png" alt="Rectangle" class="rectangle-part1">
             <img src="images/rectangle-part2.png" alt="Rectangle" class="rectangle-part2">
@@ -122,12 +145,13 @@
             <input class="join-omimi__tel" type="tel" placeholder="+7(999)9999999">
             <input class="join-omimi__city" type="text" placeholder="Ваш город">
             <button class="button__request">Оставить заявку</button>
-            <span class="offer__privacy">Нажимая кнопку, вы соглашаетесь с политикой в отношении обработки персональных данных.</span>
+            <span class="offer__privacy">Нажимая кнопку, вы соглашаетесь с <a href="politika.html">политикой в отношении
+                    обработки персональных данных.</a></span>
         </div>
     </div>
     <div class="profit center">
         <div class="profit__container">
-            <h2 class="profit__text">Какой заработок?</h2>
+            <h2 class="profit__text"><a name="part5"></a>Какой заработок?</h2>
             <img src="images/cat-in-hat.svg" alt="Cat in hat" class="profit__cat">
             <img src="images/money.svg" alt="Money" class="profit__money">
             <div class="profit__coffe-text">Кофе</div>
@@ -170,7 +194,8 @@
             <input class="franchise__tel" type="tel" placeholder="+7(999)9999999">
             <input class="franchise__city" type="text" placeholder="Ваш город">
             <button class="button__request">Оставить заявку</button>
-            <span class="offer__privacy2">Нажимая кнопку, вы соглашаетесь с политикой в отношении обработки персональных данных.</span>
+            <span class="offer__privacy2">Нажимая кнопку, вы соглашаетесь с <a href="politika.html">политикой в
+                    отношении обработки персональных данных.</a></span>
         </div>
     </div>
     <div class="why-omimi center">
@@ -179,7 +204,7 @@
             <div class="reasons">
                 <div class="reasons__item">
                     <img src="images/star.svg" alt="Star" class="star">
-                    <div class="item">Мобильное приложение</div>
+                    <div class="item"><a name="part6"></a>Мобильное приложение</div>
                 </div>
                 <div class="reasons__item">
                     <img src="images/star.svg" alt="Star" class="star">
@@ -218,14 +243,15 @@
             <input class="make-money__tel" type="tel" placeholder="+7(999)9999999">
             <input class="make-money__city" type="text" placeholder="Ваш город">
             <button class="button__request">Оставить заявку</button>
-            <span class="offer__privacy">Нажимая кнопку, вы соглашаетесь с политикой в отношении обработки персональных данных.</span>
+            <span class="offer__privacy">Нажимая кнопку, вы соглашаетесь с <a href="politika.html">политикой в отношении
+                    обработки персональных данных.</a></span>
         </div>
     </div>
     <div class="become-partner center">
         <div class="become-partner__container">
             <img src="images/paws-left.svg" alt="Paws left" class="paws-left">
             <div class="become-partner__text">
-                <h2 class="partner__text">Как стать партнёром</h2>
+                <h2 class="partner__text"><a name="part7"></a>Как стать партнёром</h2>
                 <img src="images/omimi-coffee.svg" alt="Omimi coffee">
                 <div class="for-partner">
                     <div class="for-partner__item">
@@ -256,6 +282,42 @@
             <img src="images/paws-hand.svg" alt="Paws hand" class="paws-hand-img">
         </div>
     </div>
+    <div class="popup-business">
+        <div class="popup-business__body">
+            <div class="popup-business__form">
+                <span class="popup-business__text">Рассчитать бизнес-план</span>
+                <input class="popup-business__name" type="text" placeholder="Ваше имя">
+                <input class="popup-business__tel" type="tel" placeholder="+7(999)9999999">
+                <input class="popup-business__email" type="email" placeholder="Ваш e-mail">
+                <button class="popup-business__request">Отправить</button>
+                <label class="popup-business__politics">
+                    <input type="checkbox">
+                    Я ознакомлен с <a href="personal_data.html">Политикой ООО «ОМИМИ» в отношении обработки персональных данных</a>,
+                    <a href="confidentiality.html">Пользовательским соглашением ООО «ОМИМИ»</a>. Я даю свое согласие на обработку <a href="personal_data.html">персональных
+                        данных</a>.
+                </label>
+            </div>
+            <div class="popup-business__close">&#10006</div>
+        </div>
+    </div>
+    <div class="popup-contract">
+        <div class="popup-contract__body">
+            <div class="popup-contract__form">
+                <span class="popup-contract__text">Заключить договор</span>
+                <input class="popup-contract__name" type="text" placeholder="Ваше имя">
+                <input class="popup-contract__tel" type="tel" placeholder="+7(999)9999999">
+                <input class="popup-contract__email" type="email" placeholder="Ваш e-mail">
+                <button class="popup-contract__request">Отправить</button>
+                <label class="popup-contract__politics">
+                    <input type="checkbox">
+                    Я ознакомлен с <a href="personal_data.html">Политикой ООО «ОМИМИ» в отношении обработки персональных данных</a>,
+                    <a href="confidentiality.html">Пользовательским соглашением ООО «ОМИМИ»</a>. Я даю свое согласие на обработку <a href="personal_data.html">персональных
+                        данных</a>.
+                </label>
+            </div>
+            <div class="popup-contract__close">&#10006</div>
+        </div>
+    </div>
     <div class="footer center">
         <div class="footer__container">
             <div class="footer__contacts">
@@ -264,21 +326,72 @@
                     <img src="images/whatsapp.svg" alt="Whatsapp" class="whatsapp">
                     <img src="images/telegram.svg" alt="Telegram" class="telegram">
                 </div>
-                <span class="footer__text">+7(981)4697301</span>
-                <span class="footer__text">E-mail для СМИ, PR:<br>pr@omimicoffee.ru</span>
+                <a href="tel:+79814697301" class="footer__text">+7(981)4697301</a>
+                <a href="mailto:pr@omimicoffee.ru" class="footer__text">E-mail для СМИ, PR:<br>pr@omimicoffee.ru</a>
                 <span class="footer__text">Политика конфиденциальности<br>@ Omimi Coffee 2023</span>
-                <span class="footer__text2">Политика конфиденциальности<br>@ Omimi Coffee 2023</span>
             </div>
             <div class="footer__links">
-                <a class="link__item" href="#">Станьте владельцем кофейни OMIMI COFFEE</a>
-                <a class="link__item" href="#">Кофе, чай, снэки, бонусы</a>
-                <a class="link__item" href="#">Как это работает?</a>
-                <a class="link__item" href="#">Из чего состоит?</a>
-                <a class="link__item" href="#">Какой заработок?</a>
-                <a class="link__item" href="#">Почему OMIMI COFFEE?</a>
-                <a class="link__item" href="#">Как стать партнёром OMIMI COFFEE</a>
+                <a class="link__item" href="#part1">Станьте владельцем кофейни OMIMI COFFEE</a>
+                <a class="link__item" href="#part2">Кофе, чай, снэки, бонусы</a>
+                <a class="link__item" href="#part3">Как это работает?</a>
+                <a class="link__item" href="#part4">Из чего состоит?</a>
+                <a class="link__item" href="#part5">Какой заработок?</a>
+                <a class="link__item" href="#part6">Почему OMIMI COFFEE?</a>
+                <a class="link__item" href="#part7">Как стать партнёром OMIMI COFFEE</a>
             </div>
         </div>
     </div>
+    <script>
+        document.querySelector('.burger').addEventListener('click', function () {
+            this.classList.toggle('active');
+            document.querySelector('.burger_nav').classList.toggle('open');
+        })
+    </script>
+    <script>
+        let headerButton = document.querySelector('.header__button');
+        let popup = document.querySelector('.popup');
+        let popupClose = document.querySelector('.popup__close');
+
+        headerButton.onclick = function () {
+            popup.style.display = 'block';
+        }
+
+        popupClose.onclick = function () {
+            popup.style.display = 'none';
+        }
+
+        window.onclick = function () {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        }
+    </script>
+    <script>
+        let businessPlan = document.querySelector('.business-plan');
+        let popupBusiness = document.querySelector('.popup-business');
+        let popupBusinessClose = document.querySelector('.popup-business__close');
+
+        businessPlan.onclick = function () {
+            popupBusiness.style.display = 'block';
+        }
+
+        popupBusinessClose.onclick = function () {
+            popupBusiness.style.display = 'none';
+        }
+    </script>
+    <script>
+        let contract = document.querySelector('.contract');
+        let popupContract = document.querySelector('.popup-contract');
+        let popupContractClose = document.querySelector('.popup-contract__close');
+
+        contract.onclick = function () {
+            popupContract.style.display = 'block';
+        }
+
+        popupContractClose.onclick = function () {
+            popupContract.style.display = 'none';
+        }
+    </script>
 </body>
+
 </html>

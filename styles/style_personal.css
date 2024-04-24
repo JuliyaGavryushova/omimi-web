@@ -1,0 +1,24 @@
+body {
+    box-sizing: border-box;
+}
+
+.center {
+    padding-left: clamp(10px, 3vw, 35px);
+    padding-right: clamp(10px, 3vw, 35px);
+}
+
+.data-container {
+    min-width: 640px;
+}
+
+.confidentiality__container {
+    min-width: 640px;
+}
+
+.personal-data__container {
+    min-width: 640px;
+}
+
+h4 {
+    text-align: center;
+}
