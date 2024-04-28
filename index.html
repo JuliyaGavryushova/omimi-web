@@ -23,13 +23,13 @@
             <button class="header__button">Заказать звонок</button>
             <nav class="burger_nav">
                 <ul>
-                    <a href="#">Станьте владельцем кофейни OMIMI COFFEE</a>
-                    <a href="#">Кофе, чай, снэки, бонусы</a>
-                    <a href="#">Как это работает?</a>
-                    <a href="#">Из чего состоит?</a>
-                    <a href="#">Какой заработок?</a>
-                    <a href="#">Почему OMIMI COFFEE?</a>
-                    <a href="#">Как стать партнёром OMIMI COFFEE</a>
+                    <a href="#part1">Станьте владельцем кофейни OMIMI COFFEE</a>
+                    <a href="#part2">Кофе, чай, снэки, бонусы</a>
+                    <a href="#part3">Как это работает?</a>
+                    <a href="#part4">Из чего состоит?</a>
+                    <a href="#part5">Какой заработок?</a>
+                    <a href="#part6">Почему OMIMI COFFEE?</a>
+                    <a href="#part7">Как стать партнёром OMIMI COFFEE</a>
                 </ul>
             </nav>
             <div class="burger">
@@ -41,7 +41,7 @@
         <div class="popup__body">
             <div class="popup__form">
                 <span class="popup__text">Оставьте ваш телефон, мы с Вами свяжемся</span>
-                <input class="popup__tel" type="tel" placeholder="+7(999)9999999">
+                <input id="phone-input" class="popup__tel" type="tel" placeholder="+7(999)9999999">
                 <button class="popup__request">Отправить</button>
             </div>
             <div class="popup__close">&#10006</div>
@@ -76,7 +76,7 @@
             <span class="offer__text"><a name="part1"></a>Получи предложение</span>
             <input class="input__name" type="text" placeholder="Ваше имя">
             <input class="input__email" type="email" placeholder="Ваш e-mail">
-            <input class="input__tel" type="tel" placeholder="+7(999)9999999">
+            <input id="phone-input2" class="input__tel" type="tel" placeholder="+7(999)9999999">
             <input class="input__city" type="text" placeholder="Ваш город">
             <button class="button__request">Оставить заявку</button>
             <span class="offer__privacy">Нажимая кнопку, вы соглашаетесь с <a href="politika.html">политикой в отношении
@@ -87,12 +87,14 @@
         <h3 class="how-work"><a name="part3"></a>Как это работает?</h3>
         <div class="cat-button">
             <img src="images/cat.svg" alt="Cat work" class="cat-work">
-            <button class="watch-video">
-                <span class="watch-video__item">Смотри</span>
-                <span class="watch-video__item">Видео</span>
-                <img src="images/arrow.svg" alt="Arrow" class="watch-video__arrow">
-                <span class="watch-video__item">Оцени процесс</span>
-            </button>
+            <a href="https://www.youtube.com/watch?v=SayYXvwtoDw">
+                <button class="watch-video">
+                    <span class="watch-video__item">Смотри</span>
+                    <span class="watch-video__item">Видео</span>
+                    <img src="images/arrow.svg" alt="Arrow" class="watch-video__arrow">
+                    <span class="watch-video__item">Оцени процесс</span>
+                </button>
+            </a>
         </div>
     </div>
     <div class="open-coffee center">
@@ -100,7 +102,7 @@
             <span class="open-coffee__text">Открой кофейню</span>
             <input class="open-coffee__name" type="text" placeholder="Ваше имя">
             <input class="open-coffee__email" type="email" placeholder="Ваш e-mail">
-            <input class="open-coffee__tel" type="tel" placeholder="+7(999)9999999">
+            <input id="phone-input3" class="open-coffee__tel" type="tel" placeholder="+7(999)9999999">
             <input class="open-coffee__city" type="text" placeholder="Ваш город">
             <button class="button__request">Оставить заявку</button>
             <span class="offer__privacy2">Нажимая кнопку, вы соглашаетесь с <a href="politika.html">политикой в
@@ -114,12 +116,12 @@
             <div class="tea__text">Чай</div>
             <div class="cm210">210 см</div>
             <div class="cm140">140 см</div>
-            <div class="price420">420 000 ₽</div>
+            <div class="price420">400 000 ₽</div>
             <div class="snack__text">Снэковый аппарат</div>
             <div class="positions12">12 позиций</div>
             <div class="cm20">20 см</div>
             <div class="cm210-2">210 см</div>
-            <div class="price80">80 000 ₽</div>
+            <div class="price80">50 000 ₽</div>
             <span class="how-much">Сколько стоит?</span>
             <img src="images/rectangle-part1.png" alt="Rectangle" class="rectangle-part1">
             <img src="images/rectangle-part2.png" alt="Rectangle" class="rectangle-part2">
@@ -142,7 +144,7 @@
             <span class="join-omimi__text">Стань частью OMIMI</span>
             <input class="join-omimi__name" type="text" placeholder="Ваше имя">
             <input class="join-omimi__email" type="email" placeholder="Ваш e-mail">
-            <input class="join-omimi__tel" type="tel" placeholder="+7(999)9999999">
+            <input id="phone-input4" class="join-omimi__tel" type="tel" placeholder="+7(999)9999999">
             <input class="join-omimi__city" type="text" placeholder="Ваш город">
             <button class="button__request">Оставить заявку</button>
             <span class="offer__privacy">Нажимая кнопку, вы соглашаетесь с <a href="politika.html">политикой в отношении
@@ -191,7 +193,7 @@
             <span class="franchise__text">Открой франшизу</span>
             <input class="franchise__name" type="text" placeholder="Ваше имя">
             <input class="franchise__email" type="email" placeholder="Ваш e-mail">
-            <input class="franchise__tel" type="tel" placeholder="+7(999)9999999">
+            <input id="phone-input5" class="franchise__tel" type="tel" placeholder="+7(999)9999999">
             <input class="franchise__city" type="text" placeholder="Ваш город">
             <button class="button__request">Оставить заявку</button>
             <span class="offer__privacy2">Нажимая кнопку, вы соглашаетесь с <a href="politika.html">политикой в
@@ -240,7 +242,7 @@
             <span class="make-money__text">Заработай с OMIMI</span>
             <input class="make-money__name" type="text" placeholder="Ваше имя">
             <input class="make-money__email" type="email" placeholder="Ваш e-mail">
-            <input class="make-money__tel" type="tel" placeholder="+7(999)9999999">
+            <input id="phone-input6" class="make-money__tel" type="tel" placeholder="+7(999)9999999">
             <input class="make-money__city" type="text" placeholder="Ваш город">
             <button class="button__request">Оставить заявку</button>
             <span class="offer__privacy">Нажимая кнопку, вы соглашаетесь с <a href="politika.html">политикой в отношении
@@ -287,7 +289,7 @@
             <div class="popup-business__form">
                 <span class="popup-business__text">Рассчитать бизнес-план</span>
                 <input class="popup-business__name" type="text" placeholder="Ваше имя">
-                <input class="popup-business__tel" type="tel" placeholder="+7(999)9999999">
+                <input id="phone-input7" class="popup-business__tel" type="tel" placeholder="+7(999)9999999">
                 <input class="popup-business__email" type="email" placeholder="Ваш e-mail">
                 <button class="popup-business__request">Отправить</button>
                 <label class="popup-business__politics">
@@ -305,7 +307,7 @@
             <div class="popup-contract__form">
                 <span class="popup-contract__text">Заключить договор</span>
                 <input class="popup-contract__name" type="text" placeholder="Ваше имя">
-                <input class="popup-contract__tel" type="tel" placeholder="+7(999)9999999">
+                <input id="phone-input8" class="popup-contract__tel" type="tel" placeholder="+7(999)9999999">
                 <input class="popup-contract__email" type="email" placeholder="Ваш e-mail">
                 <button class="popup-contract__request">Отправить</button>
                 <label class="popup-contract__politics">
@@ -328,7 +330,7 @@
                 </div>
                 <a href="tel:+79814697301" class="footer__text">+7(981)4697301</a>
                 <a href="mailto:pr@omimicoffee.ru" class="footer__text">E-mail для СМИ, PR:<br>pr@omimicoffee.ru</a>
-                <span class="footer__text">Политика конфиденциальности<br>@ Omimi Coffee 2023</span>
+                <span class="footer__text"><a href="confidentiality.html">Политика конфиденциальности</a><br>@ Omimi Coffee 2023</span>
             </div>
             <div class="footer__links">
                 <a class="link__item" href="#part1">Станьте владельцем кофейни OMIMI COFFEE</a>
@@ -346,6 +348,13 @@
             this.classList.toggle('active');
             document.querySelector('.burger_nav').classList.toggle('open');
         })
+
+        document.querySelectorAll('.burger_nav a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelector('.burger').classList.remove('active');
+                document.querySelector('.burger_nav').classList.remove('open');
+            });
+        });
     </script>
     <script>
         let headerButton = document.querySelector('.header__button');
@@ -391,6 +400,24 @@
         popupContractClose.onclick = function () {
             popupContract.style.display = 'none';
         }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/imask"></script>
+    <script>
+        function setupPhoneMask(inputId) {
+            var telMask = IMask(
+                document.getElementById(inputId), {
+                    mask: '+{7}(000)000-00-00'
+                });
+        }
+
+        setupPhoneMask('phone-input');
+        setupPhoneMask('phone-input2');
+        setupPhoneMask('phone-input3');
+        setupPhoneMask('phone-input4');
+        setupPhoneMask('phone-input5');
+        setupPhoneMask('phone-input6');
+        setupPhoneMask('phone-input7');
+        setupPhoneMask('phone-input8');
     </script>
 </body>
 

@@ -8,17 +8,61 @@ body {
 }
 
 .data-container {
-    min-width: 640px;
+    padding: 30px 50px;
+    font-size: 25px;
+    text-align: justify;
 }
 
 .confidentiality__container {
-    min-width: 640px;
+    padding: 30px 50px;
+    font-size: 25px;
+    text-align: justify;
 }
 
 .personal-data__container {
-    min-width: 640px;
+    padding: 30px 50px;
+    font-size: 25px;
+    text-align: justify;
 }
 
 h4 {
     text-align: center;
+}
+
+@media (max-width: 1023px) {
+
+    .data-container {
+        padding: 30px 40px;
+        font-size: 18px;
+    }
+
+    .confidentiality__container {
+        padding: 30px 40px;
+        font-size: 18px;
+    }
+
+    .personal-data__container {
+        padding: 30px 40px;
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .data-container {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .confidentiality__container {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .personal-data__container {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
 }
